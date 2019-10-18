@@ -11,13 +11,9 @@ will be bulding an app to find National Parks in the chosen state and provide in
 ##WireFrames
 
 
+![](wireframe1.png)
 
-![](wireframe1.pdf)
-
-![](wireframe2.pdf)
-
-[](wireframe2.pdf)
-
+![](wireframe2.png)
 
 
 
