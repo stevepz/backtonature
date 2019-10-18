@@ -1,26 +1,87 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Link, Route } from 'react-router-dom';
+import Header from './components/Header';
+import ParkList from './components/ParkList';
+import ParkDetail from './components/ParkDetail';
+import Footer from './components/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+import { getParkList, getPark } from
+  './services/parks-api-helper.js'
+import { getLocation } from
+  './services/geo-api-helper.js'
+
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      parkList: '',
+      park: {},
+      stateList: [],
+      stateCode: "",
+    }
+
+  }
+
+  componentDidMount = async () => {
+
+    let stateCode = await getLocation(this.state.stateCode)
+    this.setState({
+      stateCode: stateCode
+    })
+
+    let parkList = await getParkList(this.state.stateCode)
+    this.setState({
+      parkList: parkList
+    })
+
+
+    // let park = await getPark(this.state.parkList.data[0].parkCode)
+    // this.setState({
+    //   park: park
+    // })
+    // console.log('park', this.state.park)
+
+
+  }
+
+
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+
+        {this.state.parkList ?
+          <>
+            <Route exact path="/" render={() =>
+              (<ParkList
+                parkList={this.state.parkList}
+              />
+              )}
+            />
+            <Route path='/:parkId' render={(props) =>
+              (
+                <ParkDetail
+                  parkId={props.match.params.parkidId}
+                />
+              )}
+            />
+          </>
+          :
+          <p></p>
+        }
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
+
+
+
+

@@ -1,22 +1,60 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#header{
+  background-color: black;
+  height: 6em;
+  width: 100%;
   color: white;
+  position: fixed;
+  top:0;
+    }
+  #header h1{
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    padding:.5em;
+    margin: 0;
+    position: fixed;
+    top:0; 
+    z-index: 0.9;
+    width: 100%;
+    font-family: 'comic book';
+    }
+#header-link-div { 
+      z-index: 1;
+      font-size: 1.3em;
+      margin-right: 1em;
+      width: 100%
+    }
+#header-link { 
+  width: 30%;
+  margin-right: 1em;
+  color: white;
+  position: fixed;
+  top:1.6em; 
+  z-index: 1;
+  padding-left: 3em;
 }
 
-.App-link {
-  color: #09d3ac;
+#park{
+  background-color: aqua;
+}
+
+
+
+
+
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
+}
+
+small {
+  text-align: center;
+  display: block;
+  background-color: #000033;
+  color: white;
+  padding: 1em 0 1em 0;
 }
