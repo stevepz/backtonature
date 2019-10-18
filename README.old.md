@@ -1,19 +1,15 @@
 # Back to Nature
 
 ##Propsal/Project Oveview:
-
-[](https://media.giphy.com/media/3NeRncMrUNb8astzVy/giphy.gif)
-
 will be bulding an app to find National Parks in the chosen state and provide information aout the park.
-
 
 ##WireFrames
 
 
 
-![](wireframes/wireframe1.pdf)
+![](wireframe1.pdf)
 
-![](wireframes/wireframe2.pdf)
+![](wireframe2.pdf)
 
 
 
