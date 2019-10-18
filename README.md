@@ -2,7 +2,8 @@
 
 ##Propsal/Project Oveview:
 
-[](https://media.giphy.com/media/3NeRncMrUNb8astzVy/giphy.gif)
+
+![](https://media.giphy.com/media/3NeRncMrUNb8astzVy/giphy.gif)
 
 will be bulding an app to find National Parks in the chosen state and provide information aout the park.
 
