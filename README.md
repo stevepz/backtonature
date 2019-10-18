@@ -7,9 +7,9 @@ will be bulding an app to find National Parks in the chosen state and provide in
 
 
 
-![](Screen Shot 2019-10-17 at 10.51.23 PM.pdf)
+![](ScreenShot1.pdf)
 
-![](Screen Shot 2019-10-17 at 11.01.02 PM.pdf)
+![](ScreenShot2.pdf)
 
 
 
