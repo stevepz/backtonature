@@ -5,6 +5,7 @@ import Header from './components/Header';
 import ParkList from './components/ParkList';
 import ParkDetail from './components/ParkDetail';
 import Footer from './components/Footer';
+import DisplayIt from './components/DisplayIt';
 import { getParkList } from
   './services/parks-api-helper.js'
 import { getLocation } from
@@ -19,60 +20,82 @@ class App extends React.Component {
       park: {},
       stateList: [],
       stateCode: "",
+      stateName: ""
     }
 
   }
 
   componentDidMount = async () => {
-
-    let stateCode = await getLocation(this.state.stateCode)
+    let location = await getLocation()
+    console.log(location)
     this.setState({
-      stateCode: stateCode
+      stateName: location.region_name,
+      stateCode: location.region_code
     })
 
     let parkList = await getParkList(this.state.stateCode)
     this.setState({
       parkList: parkList
     })
-
   }
 
-  // let park = await getPark(this.state.parkList.data[0].parkCode)
-  // this.setState({
-  //   park: park
-  // })
-  // console.log('park', this.state.park)
+  // componentDidMount = async () => {
+  //   let location = await getLocation()
+  //   console.log(location)
+  //   this.setState({
+  //     stateName: location.region_name,
+  //     stateCode: location.region_code
+  //   })
 
+  //   let parkList = await getParkList(this.state.stateCode)
+  //   this.setState({
+  //     parkList: parkList
+  //   })
+  // }
 
 
 
 
   render() {
     return (
-      <div className="App">
-        <Header />
+      <DisplayIt
+        parkList={this.state.parkList}
+        stateName={this.state.stateName}
+      />
 
-        {this.state.parkList ?
-          <>
-            <Route exact path="/" render={() =>
-              (<ParkList
-                parkList={this.state.parkList}
-              />
-              )}
-            />
-            <Route path='/:parkCode' render={(props) =>
-              (
-                <ParkDetail
-                  parkCode={props.match.params.parkCode}
-                />
-              )}
-            />
-          </>
-          :
-          <p></p>
-        }
-        <Footer />
-      </div>
+      // <div className="App">
+      //   <Header />
+      //   {this.state.parkList ?
+      //     <>
+      //       <Route exact path="/" render={() =>
+      //         (<ParkList
+      //           parkList={this.state.parkList}
+      //           stateName={this.state.stateName}
+      //         />
+      //         )}
+      //       />
+      //       <Route path='/:parkCode' render={(props) =>
+      //         (
+      //           <ParkDetail
+      //             parkCode={props.match.params.parkCode}
+      //           />
+      //         )}
+      //       />
+      //                   <Route path='/chgstate' render={(props) =>
+      //         (
+      //           <ChgState
+      //             need go pass an onclick function so it can update the state ( in state)
+      //             then trigger going back tho home and updating the page with the new state
+      //           />
+      //         )}
+      //       />
+
+      //     </>
+      //     :
+      //     <p></p>
+      //   }
+      //   <Footer />
+      // </div>
     );
   }
 }

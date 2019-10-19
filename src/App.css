@@ -1,43 +1,77 @@
 
 #header{
-  background-color: black;
-  height: 6em;
+  background-color: lightskyblue;
+  height: 5em;
   width: 100%;
-  color: white;
   position: fixed;
   top:0;
-    }
-  #header h1{
-    color: white;
-    text-align: center;
-    font-size: 3em;
-    padding:.5em;
-    margin: 0;
-    position: fixed;
-    top:0; 
-    z-index: 0.9;
-    width: 100%;
-    font-family: 'comic book';
-    }
+  }
+#header h1{
+  color: #06618b;
+  text-align: center;
+  font-size: 3em;
+  padding: .3em;
+  margin: 0;
+  position: fixed;
+  top:0; 
+  z-index: 0.9;
+  width: 100%;
+  }
 #header-link-div { 
-      z-index: 1;
-      font-size: 1.3em;
-      margin-right: 1em;
-      width: 100%
-    }
+  z-index: 1;
+  font-size: 1.3em;
+  margin-right: 1em;
+  width: 100%
+  }
 #header-link { 
   width: 30%;
   margin-right: 1em;
-  color: white;
+  color: #06618b;
   position: fixed;
   top:1.6em; 
   z-index: 1;
   padding-left: 3em;
+  }
+
+  #header-state-div { 
+    z-index: 1;
+    font-size: 1.3em;
+    margin-left: 80%;
+    width: 100%;
+    justify-self: right;
+    }
+
+  #header-state { 
+    width: 30%;
+    margin-right: 1em;
+    color:  #06618b;
+    position: fixed;
+    top:1.6em; 
+    z-index: 1;
+    padding-left: 3em;
+    }
+
+#park-l{
+  background-color: lightskyblue;
+  margin-top: 5em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
-#park{
-  background-color: aqua;
+#park-d{
+  background-color: lightskyblue;
+  margin-top: 5em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
+
+.park-d-images{
+  height: 33em;
+  width: 33em;
+}
+
 
 
 
@@ -54,7 +88,7 @@ footer {
 small {
   text-align: center;
   display: block;
-  background-color: #000033;
-  color: white;
+  background-color: lightskyblue;
+  color: #06618b;
   padding: 1em 0 1em 0;
 }

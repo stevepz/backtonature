@@ -8,6 +8,9 @@ export default function Header() {
         <Link id="header-link" className="header-txt" to="/">Home</Link>
       </div>
       <h1 id="header-text" className="header-text">HEADER</h1>
+      <div id="header-state-div">
+        <Link id="header-state" className="header-txt" to="/chgstate">Change State</Link>
+      </div>
     </div>
   )
 }
