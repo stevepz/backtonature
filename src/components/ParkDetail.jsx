@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Route } from 'react-router-dom';
 
 import { getPark } from '../services/parks-api-helper';
 
@@ -11,10 +12,14 @@ export default class ParkDetail extends React.Component {
     }
   }
 
-  componentDidMount = async () => {
-    console.log('here4', this.props.parkCode)
 
-    let parkDetail = await getPark(this.props.parkCode)
+  componentDidMount = async () => {
+
+    let parkCode = Object.values(this.props)
+    parkCode = parkCode[0].slice(1)
+
+
+    let parkDetail = await getPark(parkCode)
     this.setState({
       parkDetail: parkDetail
     })

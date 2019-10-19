@@ -9,7 +9,7 @@ export default function ParkList(props) {
         <div id="parks-l-info">
           {props.parkList.data.map(
             (park) =>
-              (<Link to={`/${park.parkCode}`} key={park.id} >
+              (<Link to={`/park:${park.parkCode}`} key={park.id} >
                 <div className="parks-l-link">
                   <h1 className="parks-l-name">{park.fullName}</h1>
                   <h2 className="parks-l-designation" > {park.designation}</h2>

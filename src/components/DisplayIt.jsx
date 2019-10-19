@@ -28,14 +28,14 @@ export default function DisplayIt(props) {
             />
             )}
           />
-          <Route path='/:parkCode' render={(props) =>
+          <Route path='/park:parkCode' render={(props) =>
             (
               <ParkDetail
                 parkCode={props.match.params.parkCode}
               />
             )}
           />
-          {/* <Route path='/chgstate' render={(props) =>
+          {/* <Route exact path='/chgstate' render={(props) =>
                 (
                   <ChgState
                     need go pass an onclick function so it can update the state ( in state)
