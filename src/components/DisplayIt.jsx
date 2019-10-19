@@ -5,11 +5,6 @@ import ParkList from './ParkList';
 import ParkDetail from './ParkDetail';
 import Footer from './Footer';
 import ChgState from './ChgState';
-import { getParkList } from
-  '../services/parks-api-helper.js'
-import { getLocation } from
-  '../services/geo-api-helper.js'
-
 
 export default function DisplayIt(props) {
 
@@ -17,11 +12,6 @@ export default function DisplayIt(props) {
   let stateName = props.stateName
   let handleSelect = props.handleSelect
   let handleSubmit = props.handleSubmit
-
-  console.log('ss', props)
-  // console.log('tt', props.parkList)
-  // console.log('tt', props.stateName)
-  console.log('display check if passed', handleSelect, handleSubmit)
 
   return (
     <div className="App">
@@ -47,12 +37,9 @@ export default function DisplayIt(props) {
               <ChgState
                 handleSelect={handleSelect}
                 handleSubmit={handleSubmit}
-              // need go pass an onclick function so it can update the state ( in state)
-              //     then trigger going back tho home and updating the page with the new state
               />
             )}
           />
-
         </>
         :
         <p></p>
