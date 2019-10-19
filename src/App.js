@@ -39,67 +39,43 @@ class App extends React.Component {
     })
   }
 
-  // componentDidMount = async () => {
-  //   let location = await getLocation()
-  //   console.log(location)
-  //   this.setState({
-  //     stateName: location.region_name,
-  //     stateCode: location.region_code
-  //   })
+  handleSelect = (event) => {
+    let selected = event.target.value
+    let stateCode = selected.slice(0, 2)
+    // parkCode = parkCode[0].slice(1, 3)
+    let stateName = selected.slice(3)
+    console.log('handlesescalect', event)
+    console.log('handleselect', stateCode)
+    console.log('handleselect', stateName)
+    // this.setState({
+    //   category: category
+    // })
+  }
 
-  //   let parkList = await getParkList(this.state.stateCode)
-  //   this.setState({
-  //     parkList: parkList
-  //   })
-  // }
+  handleSubmit = (event) => {
+    event.preventDefault();
+    // let pic = await getpic(this.state.category)
+    console.log('handlesubmit', event)
+    // this.setState({
+    //   pic: pic
+    // })
+  }
 
 
 
 
   render() {
+    console.log('handlesubmit', this.handleSubmit)
     return (
       <DisplayIt
         parkList={this.state.parkList}
         stateName={this.state.stateName}
+        handleSelect={this.handleSelect}
+        handleSubmit={this.handleSubmit}
       />
-
-      // <div className="App">
-      //   <Header />
-      //   {this.state.parkList ?
-      //     <>
-      //       <Route exact path="/" render={() =>
-      //         (<ParkList
-      //           parkList={this.state.parkList}
-      //           stateName={this.state.stateName}
-      //         />
-      //         )}
-      //       />
-      //       <Route path='/:parkCode' render={(props) =>
-      //         (
-      //           <ParkDetail
-      //             parkCode={props.match.params.parkCode}
-      //           />
-      //         )}
-      //       />
-      //                   <Route path='/chgstate' render={(props) =>
-      //         (
-      //           <ChgState
-      //             need go pass an onclick function so it can update the state ( in state)
-      //             then trigger going back tho home and updating the page with the new state
-      //           />
-      //         )}
-      //       />
-
-      //     </>
-      //     :
-      //     <p></p>
-      //   }
-      //   <Footer />
-      // </div>
     );
   }
 }
-
 export default App;
 
 
