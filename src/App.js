@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Header from './components/Header';
 import ParkList from './components/ParkList';
 import ParkDetail from './components/ParkDetail';
 import Footer from './components/Footer';
-
-
-
-import { getParkList, getPark } from
+import { getParkList } from
   './services/parks-api-helper.js'
 import { getLocation } from
   './services/geo-api-helper.js'
@@ -38,15 +35,15 @@ class App extends React.Component {
       parkList: parkList
     })
 
-
-    // let park = await getPark(this.state.parkList.data[0].parkCode)
-    // this.setState({
-    //   park: park
-    // })
-    // console.log('park', this.state.park)
-
-
   }
+
+  // let park = await getPark(this.state.parkList.data[0].parkCode)
+  // this.setState({
+  //   park: park
+  // })
+  // console.log('park', this.state.park)
+
+
 
 
 
@@ -63,10 +60,10 @@ class App extends React.Component {
               />
               )}
             />
-            <Route path='/:parkId' render={(props) =>
+            <Route path='/:parkCode' render={(props) =>
               (
                 <ParkDetail
-                  parkId={props.match.params.parkidId}
+                  parkCode={props.match.params.parkCode}
                 />
               )}
             />
