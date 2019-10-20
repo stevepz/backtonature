@@ -1,13 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function ChgState(props) {
 
   return (
     <div>
-      <h1>heresdasasdasasd</h1>
-      <h1>heresdasasdasasd</h1>
-      <h1>heresdasasdasasd</h1>
       <form id="state-select" className="state-chg" onSubmit={props.handleSubmit} >
         <select autoFocus onChange={props.handleSelect} defaultValue="Select State">
           <option disabled value="Select State">Select State</option>
@@ -66,29 +62,10 @@ export default function ChgState(props) {
           <option value="WY:Wyoming">Wyoming</option>
         </select>
 
-        <input type="submit" value="Update State"
-
+        <input type="submit"
+          value="Update State"
         />
-
-
-        <Link id="me" className="me2" to="/">Update state</Link>
-
       </form>
-
-
     </div>
   )
 }
-
-    // <form id="state-select" className="state-chg" onSubmit={props.handleSubmit} >
-    //   <input type="text" name="0" onChange={props.handleChange} placeholder="State" />
-    //   <input type="submit" value="Update State" />
-
-    //   <select autofocus>
-    //     <option value="grapefruit">Grapefruit</option>
-    //     <option value="lime">Lime</option>
-    //     <option selected value="coconut">Coconut</option>
-    //     <option value="mango">Mango</option>
-    //   </select>
-    // </form>
-

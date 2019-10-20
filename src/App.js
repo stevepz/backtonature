@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Route } from 'react-router-dom';
-import DisplayIt from './components/DisplayIt';
+import DisplayIt from
+  './components/DisplayIt';
 import { getParkList } from
   './services/parks-api-helper.js'
 import { getLocation } from
@@ -51,10 +51,10 @@ class App extends React.Component {
       stateName: this.state.newStateName,
       stateCode: this.state.newStateCode
     })
+    document.getElementById('header-link').click();
   }
 
   render() {
-    console.log('handlesubmit', this.handleSubmit)
     return (
       <DisplayIt
         parkList={this.state.parkList}
@@ -66,7 +66,3 @@ class App extends React.Component {
   }
 }
 export default App;
-
-
-
-

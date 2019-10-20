@@ -14,6 +14,27 @@ export default function ParkList(props) {
                   <h1 className="parks-l-name">{park.fullName}</h1>
                   <h2 className="parks-l-designation" > {park.designation}</h2>
                   <h2 className="parks-l-description">{park.description}</h2>
+
+                  {park.images.map(
+                    (parkImages, index) =>
+                      (
+                        <div className='park-l-images' >
+                          <h1>{'park-l-images-' + index}</h1>
+                          <h1>{'park-l-images-' + index}</h1>
+                          <h1>sas{index}</h1>
+
+                          <img
+                            className={'park-l-images-' + index}
+                            key={parkImages.id}
+                            src={parkImages.url}
+                            alt={parkImages.altText} />
+                        </div>
+                      )
+                  )
+                  }
+
+
+
                 </div>
               </Link>
               )
@@ -21,6 +42,6 @@ export default function ParkList(props) {
           }
         </div>
       </div>
-    </div>
+    </div >
   )
 }

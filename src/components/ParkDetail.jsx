@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
-
 import { getPark } from '../services/parks-api-helper';
 
 export default class ParkDetail extends React.Component {
@@ -18,18 +16,14 @@ export default class ParkDetail extends React.Component {
     let parkCode = Object.values(this.props)
     parkCode = parkCode[0].slice(1)
 
-
     let parkDetail = await getPark(parkCode)
     this.setState({
       parkDetail: parkDetail
     })
-    console.log('here5', this.state.parkDetail)
-    // console.log('here6', this.state.parkDetail.data[0].images[0].url)
   }
 
   render() {
     const parkDetail = this.state.parkDetail
-    console.log('asd', parkDetail.data)
     if (parkDetail) {
       return (
         <div id="park-d">
@@ -62,16 +56,3 @@ export default class ParkDetail extends React.Component {
     }
   }
 }
-
-//******************* */
-
-// return (
-//   <div id="park">
-//     <div id="park-list-div">
-//       <h2 className="parks">PARK Detail</h2>
-//       <div id="park-list-div2">
-//       </div>
-//     </div>
-//   </div>
-// )
-// }
