@@ -59,6 +59,17 @@
   padding-bottom: 2em;
 }
 
+.park-l-images{
+  display: inline-block;
+  height: 5em;
+  width: 5em;
+  border:.3em;
+}
+
+
+
+
+
 #park-d{
   background-color: lightskyblue;
   margin-top: 5em;
@@ -67,7 +78,11 @@
   padding-bottom: 2em;
 }
 
-
+.park-d-images{
+  display: block;
+  height: 5em;
+  width: 5em;
+}
 
 
 

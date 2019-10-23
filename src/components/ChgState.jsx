@@ -4,6 +4,10 @@ export default function ChgState(props) {
 
   return (
     <div>
+      <h1>1 </h1>
+      <h1>2</h1>
+      <h1>3 </h1>
+      <h1>4</h1>
       <form id="state-select" className="state-chg" onSubmit={props.handleSubmit} >
         <select autoFocus onChange={props.handleSelect} defaultValue="Select State">
           <option disabled value="Select State">Select State</option>
