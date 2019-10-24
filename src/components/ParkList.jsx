@@ -14,21 +14,21 @@ export default function ParkList(props) {
                   <h1 className="parks-l-name">{park.fullName}</h1>
                   <h2 className="parks-l-designation" > {park.designation}</h2>
                   <h2 className="parks-l-description">{park.description}</h2>
+                  <div className="parks-l-images">
+                    {park.images.map(
+                      (parkImages, index) =>
+                        (
+                          <img
+                            className='park-l-image'
+                            key={parkImages.id}
+                            src={parkImages.url}
+                            alt={parkImages.altText} />
+                        )
+                    )
+                    }
 
-                  {park.images.map(
-                    (parkImages, index) =>
-                      (
-                        <img
-                          className='park-l-images'
-                          key={parkImages.id}
-                          src={parkImages.url}
-                          alt={parkImages.altText} />
-                      )
-                  )
-                  }
 
-
-
+                  </div>
                 </div>
               </Link>
               )

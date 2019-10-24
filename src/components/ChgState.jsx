@@ -3,11 +3,8 @@ import React from 'react';
 export default function ChgState(props) {
 
   return (
-    <div>
-      <h1>1 </h1>
-      <h1>2</h1>
-      <h1>3 </h1>
-      <h1>4</h1>
+    <div className="state-chg-container">
+
       <form id="state-select" className="state-chg" onSubmit={props.handleSubmit} >
         <select autoFocus onChange={props.handleSelect} defaultValue="Select State">
           <option disabled value="Select State">Select State</option>
@@ -66,7 +63,7 @@ export default function ChgState(props) {
           <option value="WY:Wyoming">Wyoming</option>
         </select>
 
-        <input type="submit"
+        <input className="state-button" type="submit"
           value="Update State"
         />
       </form>

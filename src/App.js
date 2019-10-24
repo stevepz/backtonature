@@ -25,6 +25,7 @@ class App extends React.Component {
     this.setState({
       stateName: location.region_name,
       stateCode: location.region_code
+
     })
 
     let parkList = await getParkList(this.state.stateCode)
@@ -34,6 +35,7 @@ class App extends React.Component {
   }
 
   handleSelect = (event) => {
+
     let selected = event.target.value
     let stateCode = selected.slice(0, 2)
     let stateName = selected.slice(3)
@@ -43,14 +45,17 @@ class App extends React.Component {
     })
   }
 
+
   handleSubmit = async (event) => {
     event.preventDefault();
-    let parkList = await getParkList(this.state.newStateCode)
-    this.setState({
-      parkList: parkList,
-      stateName: this.state.newStateName,
-      stateCode: this.state.newStateCode
-    })
+    if (this.state.newStateCode) {
+      let parkList = await getParkList(this.state.newStateCode)
+      this.setState({
+        parkList: parkList,
+        stateName: this.state.newStateName,
+        stateCode: this.state.newStateCode
+      })
+    }
     document.getElementById('header-link').click();
   }
 

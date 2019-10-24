@@ -1,3 +1,6 @@
+#header{
+  background-color: lightskyblue;
+}
 
 #header{
   background-color: lightskyblue;
@@ -42,14 +45,17 @@
     }
 
   #header-state { 
-    width: 30%;
-    margin-right: 1em;
+    width: 100%;
     color:  #06618b;
     position: fixed;
     top:1.6em; 
     z-index: 1;
-    padding-left: 3em;
     }
+
+.parks-l-head{
+  font-size: 3em;
+  text-align: center;
+}
 
 #park-l{
   background-color: lightskyblue;
@@ -57,18 +63,30 @@
   margin-bottom: 2em;
   padding-top: 2em;
   padding-bottom: 2em;
-}
-
-.park-l-images{
-  display: inline-block;
-  height: 5em;
-  width: 5em;
-  border:.3em;
+  height: 100%;
 }
 
 
 
+.parks-l-link{
+margin: 5%;
+text-align: center;
+text-decoration: none;
+}
+.parks-l-name {
+text-decoration: none;
+font-size: 2em;
 
+}
+.parks-l-designation {
+  font-size: 1em;
+  }
+
+.park-l-image{
+  height: 8em;
+  width: 8em;
+  margin:  1em;
+}
 
 #park-d{
   background-color: lightskyblue;
@@ -76,18 +94,53 @@
   margin-bottom: 2em;
   padding-top: 2em;
   padding-bottom: 2em;
+  height: 100%;
+  min-height: 100%;
+  text-align: center;
 }
 
-.park-d-images{
+.park-d-image{
+  width: 90%;
+  justify-content: center;
+  margin: 5%;
+}
+
+.park-d-image{
   display: block;
-  height: 5em;
-  width: 5em;
+  width: 90%;
 }
 
+.park-d-filler{
+  height: 30em;
+  background-color: lightskyblue;
+}
 
-
-
-
+#state-select{
+  background-color:lightskyblue;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding-left: 20%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  min-height: 30em;
+  font-size: 5em;
+  align-content: center;
+  align-items: center;
+;
+}
+#state-select select{
+font-size: .5em;
+display:block;
+}
+.state-button{
+  color:black;
+  background-color:lightsalmon;
+  font-size: .5em;
+  display:block;
+  margin-top: 2em;
+  height: 2em;
+  width: 9.8em;
+  }
 
 footer {
   width: 100%;
@@ -102,4 +155,14 @@ small {
   background-color: lightskyblue;
   color: #06618b;
   padding: 1em 0 1em 0;
+}
+
+@media only screen 
+and (max-width: 480px){
+  html {
+    font-size: 9px;
+  }
+  .parks-l-designation {
+    font-size: 1.5em;
+    }
 }

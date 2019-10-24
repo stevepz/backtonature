@@ -12,8 +12,4 @@ export const getPark = async (parkCode) => {
   let response = await axios.get(call)
   return (response.data)
 }
-   //  `https://developer.nps.gov/api/v1/articles?parkCode=${parkCode}&api_key=ewQFSORaMfttJIqbScHZgy1XH0YlngIEciUMrFXa`
-    // `https://developer.nps.gov/api/v1/events?parkCode=${parkCode}&api_key=ewQFSORaMfttJIqbScHZgy1XH0YlngIEciUMrFXa`
-    //  `https://developer.nps.gov/api/v1/alerts?parkCode=${parkCode}&api_key=ewQFSORaMfttJIqbScHZgy1XH0YlngIEciUMrFXa`
-    //  `https://developer.nps.gov/api/v1/campgrounds?parkCode=${parkCode}&api_key=ewQFSORaMfttJIqbScHZgy1XH0YlngIEciUMrFXa`
-   //`https://cors-anywhere.herokuapp.com/https://api.ipgeolocationapi.com/geolocate `
+
